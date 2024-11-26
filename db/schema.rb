@@ -18,11 +18,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_24_185901) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "musicas_playlists", id: false, force: :cascade do |t|
-    t.integer "playlist_id", null: false
-    t.integer "musica_id", null: false
-  end
-
   create_table "playlist_musicas", force: :cascade do |t|
     t.integer "playlist_id", null: false
     t.integer "musica_id", null: false

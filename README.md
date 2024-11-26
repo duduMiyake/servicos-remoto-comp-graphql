@@ -7,7 +7,20 @@
  ● Listar os dados de todas as playlists que contêm uma determinada música
 
 ver query_type.rb para as consultas
-modelo: 
+comandos: 
+
+query {
+  usuarios {
+    id
+    nome
+    idade
+    playlists {
+      id
+      nome
+    }
+  }
+}
+
 query {
   musicas {
   	id
@@ -19,12 +32,11 @@ query {
   }
 }
 
-query {
-  usuarios {
+query{
+  playlistsPorUsuario(usuarioId: 1) {
     id
     nome
-    idade
-    playlists {
+    usuario {
       id
       nome
     }

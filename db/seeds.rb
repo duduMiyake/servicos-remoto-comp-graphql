@@ -33,11 +33,12 @@ end
 # Populando Playlists com verificação para duplicados
 playlists = [
   { nome: "Playlist 1", usuario_id: Usuario.find_by(nome: "João").id },
-  { nome: "Playlist 2", usuario_id: Usuario.find_by(nome: "Maria").id },
-  { nome: "Playlist 3", usuario_id: Usuario.find_by(nome: "José").id },
-  { nome: "Playlist 4", usuario_id: Usuario.find_by(nome: "Ana").id },
-  { nome: "Playlist 5", usuario_id: Usuario.find_by(nome: "Carlos").id },
-  { nome: "Playlist 6", usuario_id: Usuario.find_by(nome: "Fernanda").id }
+  { nome: "Playlist 2", usuario_id: Usuario.find_by(nome: "João").id },
+  { nome: "Playlist 3", usuario_id: Usuario.find_by(nome: "Maria").id },
+  { nome: "Playlist 4", usuario_id: Usuario.find_by(nome: "José").id },
+  { nome: "Playlist 5", usuario_id: Usuario.find_by(nome: "Ana").id },
+  { nome: "Playlist 6", usuario_id: Usuario.find_by(nome: "Carlos").id },
+  { nome: "Playlist 7", usuario_id: Usuario.find_by(nome: "Fernanda").id }
 ]
 
 playlists.each do |playlist_data|
