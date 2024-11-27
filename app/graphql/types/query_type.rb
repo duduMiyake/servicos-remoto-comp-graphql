@@ -17,6 +17,10 @@ module Types
       argument :usuario_id, ID, required: true
     end
 
+    field :musicas_por_playlist, [ Types::MusicaType ], null: false do
+      argument :playlist_id, ID, required: true
+    end
+
     def usuarios
       Usuario.all
     end
@@ -43,6 +47,10 @@ module Types
 
     def playlists_por_usuario(usuario_id:)
       Playlist.where(usuario_id: usuario_id)
+    end
+
+    def musicas_por_playlist(playlist_id:)
+      Playlist.find(playlist_id).musicas
     end
   end
 end

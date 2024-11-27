@@ -10,12 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_24_185901) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_27_191518) do
   create_table "musicas", force: :cascade do |t|
     t.string "nome"
     t.string "artista"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "musicas_playlists", id: false, force: :cascade do |t|
+    t.integer "musica_id", null: false
+    t.integer "playlist_id", null: false
   end
 
   create_table "playlist_musicas", force: :cascade do |t|
